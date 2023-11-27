@@ -1,11 +1,17 @@
 <template>
   <div>
-    Hello
+    <EmployerDates/>
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
+import EmployerDates from '../components/EmployerDates.vue'
 
+export default {
+    components: {
+      EmployerDates
+    }
+}
 </script>
 
 <style scoped>
