@@ -22,15 +22,20 @@
 <script lang='ts'>
 
 export default {
+    props: {
+        position: String,
+        from: String,
+        to: String
+    },
 
 }
 </script>
 
 <style lang="scss">
 .EmployerForm {
-    width: 300px;
+    min-width: 300px;
     border: 1px solid #d3d3d3;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px 20px 10px 20px;
     margin: 10px 20px 10px 20px;
     -webkit-box-shadow: 8px 8px 24px -22px rgba(66, 68, 90, 1);
