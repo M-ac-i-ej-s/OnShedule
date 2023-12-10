@@ -1,0 +1,4 @@
+1. The menger creates a schedule and sends a link to the employees to tell their availability
+2. The employees fill out the form and submit it
+3. The manager can see the availability of all the employees in a table, if the schedule can be created the loght turns green, if not it stays red ( the menager can always create a schedule)
+4. The manager creates the schedule and recevies it in a pdf format
