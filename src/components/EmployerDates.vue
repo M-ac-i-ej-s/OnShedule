@@ -4,7 +4,7 @@
             <v-date-picker></v-date-picker>
         </div>
         <div class="employer-dates-workers">
-            <EmployerForm v-for="worker in this.positions" :position="worker.position" :from="worker.from" :to="worker.to" />
+            <EmployerForm v-for="(worker,index) in this.positions" :position="worker.position" :from="worker.from" :to="worker.to" :key="index"/>
             <v-btn class='employer-dates-workers-add' icon="mdi-plus" color='#a44fb8' @click="addPosition"></v-btn>
         </div>
     </div>
@@ -33,7 +33,8 @@ export default {
             this.positions.push({
                 position: '',
                 from: '',
-                to: ''
+                to: '',
+                worker: ''
             })
         }
     }
@@ -55,7 +56,8 @@ export default {
         border: 1px solid #9e9e9e;
         border-radius: 5px;
         padding: 40px 10px 40px 10px;
-        overflow: auto;
+        width: 1000px;
+        overflow-x: scroll;
         .employer-dates-workers-add {
             margin: 0 150px 0 150px;
         }

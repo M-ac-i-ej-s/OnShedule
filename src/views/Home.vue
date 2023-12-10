@@ -1,7 +1,11 @@
 <template>
   <div class='Home'>
-    <EmployerDates v-for="day in this.calendar"/>
-    <v-btn class='home-add' icon="mdi-plus" color='#a44fb8' @click='addDay'></v-btn>
+    <div class="home-form">
+      <EmployerDates v-for="(day, index) in this.calendar" :key="index"/>
+      <div class="home-form-div">
+        <v-btn icon="mdi-plus" color='#a44fb8' @click='addDay'></v-btn>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -38,8 +42,13 @@ export default {
 
 <style scoped lang='scss'>
 .Home {
-  .home-add {
-    margin: 0 0 0 150px
+  .home-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .home-form-div {
+      width: 70%;
+    }
   }
 }
 </style>
